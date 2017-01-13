@@ -1,0 +1,6 @@
+#!/bin/sh
+
+pyflakes "$1"
+pep8 --ignore=E501,E221,E701,E202 --repeat "$1"
+# E501 line too long
+true

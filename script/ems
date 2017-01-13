@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ -z "$1" ] ;then
+sudo -u jixiuf   /usr/bin/emacsclient -nw  
+else
+sudo -u jixiuf  /usr/bin/emacsclient -nw  -e "(wl-sudo-find-file \"$1\" \"$PWD\")"   
+fi
+

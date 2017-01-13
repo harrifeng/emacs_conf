@@ -1,0 +1,1 @@
+emacsclient --socket-name /tmp/emacs1000/server -eval "(run-hooks 'kill-emacs-hook)"

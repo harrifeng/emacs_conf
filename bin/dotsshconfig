@@ -1,0 +1,17 @@
+ProxyCommand d:/usr/Git/bin/connect.exe -H 172.20.65.51:12080 %h %p
+
+Host github.com
+User git
+Port 22
+Hostname github.com
+IdentityFile "d:\.ssh\id_dsa"
+TCPKeepAlive yes
+IdentitiesOnly yes
+
+Host ssh.github.com
+User git
+Port 443
+Hostname ssh.github.com
+IdentityFile "d:\.ssh\id_dsa"
+TCPKeepAlive yes
+IdentitiesOnly yes

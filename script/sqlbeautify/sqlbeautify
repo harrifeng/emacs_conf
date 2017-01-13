@@ -1,0 +1,7 @@
+#!/bin/sh
+
+BSF_HOME=$HOME/.emacs.d/lib/blancoSqlFormatter
+BSF_LIB=$BSF_HOME/lib.ant/blancosqlformatter-0.1.1.jar
+CLASSPATH=$CLASSPATH:$BSF_LIB
+echo $CLASSPATH
+env CLASSPATH=$CLASSPATH:$BSF_LIB java SqlBeautify

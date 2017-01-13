@@ -1,0 +1,14 @@
+#!/bin/bash
+    if [ -z "$1" ]
+    then   #如果没有文件名
+    echo ' show_matched_client({class="Emacs" ,instance="emacs"},"emacs","/usr/bin/emacsclient -c -n" ,nil)' |awesome-client
+#        emacsclient -c  >/dev/null &
+    else  #有文件名时
+     #先尝试显示已经存在的emacsclient(可能处于隐藏态) 
+    echo ' show_matched_client({class="Emacs" ,instance="emacs"},"emacs","/usr/bin/emacsclient -c -n" ,nil)' |awesome-client
+    #然后编辑
+#         /usr/bin/emacsclient    -n  "$@" 
+         /usr/bin/emacsclient   --eval    "(wl-sudo-find-file \"$1\" \"$PWD\")" 
+
+    fi
+

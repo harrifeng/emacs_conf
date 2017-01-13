@@ -1,0 +1,16 @@
+REGEDIT4
+ [HKEY_LOCAL_MACHINE\SOFTWARE\GNU\Emacs]
+ "Emacs.Foreground"="green"
+ "Emacs.Background"="black"
+ "Emacs.Geometry"="100x32+50+20"
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment]
+"ALTERNATE_EDITOR"="runemacs.exe"
+"EMACS_SERVER_FILE"="d:\\.emacs.d\\cache\\emacs-server-file"
+"HOME"="D:\\"
+"SVN_EDITOR"="emacsclientw"
+[HKEY_CLASSES_ROOT\*\Shell\Edit with Emacs\command]
+@="D:\\usr\\emacs\\bin\\emacsclientw.exe \"%0\""
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=hex:00,00,00,00,00,00,00,00,04,00,00,00,3a,00,1d,00,38,00,3a,00,\
+  1d,00,38,00,00,00,00,00
+

@@ -1,0 +1,44 @@
+<locatingRules xmlns="http://thaiopensource.com/ns/locating-rules/1.0">
+ <!--
+     (add-to-list 'rng-schema-locating-files (expand-file-name "~/.emacs.d/script/nxml/schemas.xml"))
+     所有以hbm.xml 结尾的文件,将使用hibernate-mapping-3.0.rnc 对其进行解析
+      注意hibernate-mapping-3.0.rnc是相对路径,相对于此文件(schemas.xml)
+ -->
+  <!-- <uri pattern="*.hbm.xml" uri="hibernate-mapping-3.0.rnc"/> -->
+  
+  <!-- 即如果一个xml 文件的根元素是E ,并且其namespace是N的话,将使用 schema s   -->
+  <!-- <documentElement prefix="" localName="hibernate-mapping" uri="hibernate.rnc"/> -->
+  <!-- 比如:根元素是hibernate-mapping 前缀是空的文件,将使用hibernate.rnc 进行解析 -->
+ <!-- <documentElement prefix="" localName="hibernate-mapping" uri="hibernate-mapping-3.0.rnc"/> -->
+ <documentElement  localName="hibernate-mapping" uri="hibernate-mapping-3.0.rnc"/>
+ <documentElement  localName="hibernate-configuration" uri="hibernate-cfg-3.0.rnc"/>
+  <!-- <uri pattern="*.hbm.xml" uri="hibernate-mapping-3.0.rnc"/> -->
+<transformURI fromPattern="*.xml" toPattern="*.rnc"/>
+
+<uri pattern="build.xml" typeId="Ant"/>
+<documentElement localName="project" typeId="Ant"/>
+
+ <namespace ns="http://maven.apache.org/POM/4.0.0" typeId="Maven2" />
+ 
+ <namespace ns="http://www.springframework.org/schema/beans" typeId="Spring3.0" />
+  <documentElement localName="beans" typeId="Spring3.0"/>
+ 
+  <documentElement localName="struts" typeId="Struts2.0"/>
+ <!-- <project xmlns="http://maven.apache.org/POM/4.0.0" -->
+<!-- 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd" -->
+<!-- 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> -->
+  <uri pattern="*.xsd" typeId="XML Schema"/>
+  <namespace ns="http://www.w3.org/2001/XMLSchema" typeId="XML Schema"/>
+  <documentElement localName="schema" typeId="XML Schema"/>
+  <documentElement prefix="xsd"  localName="schema" typeId="XML Schema"/>
+  
+  <typeId id="Ant" uri="ant.rnc"/>
+  <typeId id="Struts2.0" uri="struts-2.0.rnc"/>
+  <typeId id="Spring3.0" uri="spring-3.0.rnc"/>
+  <typeId id="XML Schema" uri="xmlschema.rnc"/>
+   <typeId id="Maven2" uri="maven2.rnc"/>  
+  <typeId id="hibernate-mapping" uri="hibernate-mapping-3.0.rnc"/>
+</locatingRules>
+
+<!-- arch-tag: 1fde96fa-b401-4033-8514-c4990b1e18a5
+     (do not change this comment) -->
